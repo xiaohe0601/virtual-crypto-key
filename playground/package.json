@@ -1,0 +1,22 @@
+{
+  "name": "@virtual-crypto-key/playground",
+  "type": "module",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "crypto-splitter": "workspace:^",
+    "ress": "catalog:prod",
+    "vue": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:build",
+    "rollup-plugin-crypto-key": "workspace:^",
+    "vite": "catalog:build",
+    "vue-tsc": "catalog:dev"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "virtual-crypto-key",
+  "type": "module",
+  "version": "0.1.1",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "description": "🔑 A JavaScript key management library built on virtual modules",
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "postinstall": "nr build",
+    "play": "nr -C playground dev",
+    "build": "nr build:crypto-splitter && nr build:rollup-plugin",
+    "build:crypto-splitter": "nr -C packages/crypto-splitter build",
+    "build:rollup-plugin": "nr -C packages/rollup-plugin-crypto-key build",
+    "release": "bumpp -r",
+    "lint": "eslint --cache",
+    "lint:fix": "nr lint --fix",
+    "lint:type": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@antfu/ni": "catalog:dev",
+    "@antfu/utils": "catalog:dev",
+    "@xiaohe01/eslint-config": "catalog:lint",
+    "@xiaohe01/tsconfig": "catalog:dev",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:lint",
+    "esno": "catalog:script",
+    "lint-staged": "catalog:lint",
+    "pncat": "catalog:cli",
+    "simple-git-hooks": "catalog:lint",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:dev",
+    "vite": "catalog:build",
+    "vitest": "catalog:test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

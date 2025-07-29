@@ -1,0 +1,152 @@
+<div align="center">
+  <h1>virtual-crypto-key</h1>
+  <span>🔑 A JavaScript key management library built on virtual modules</span>
+</div>
+
+<br>
+
+[![github stars][github-stars-src]][github-stars-href]
+[![License][license-src]][license-href]
+
+xiaohe0601 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
+
+Obfuscate and split the key, then merge it at runtime via a virtual module to prevent plaintext key exposure.
+
+## 🚁 Installation
+
+```shell
+# pnpm
+pnpm add crypto-splitter
+pnpm add -D rollup-plugin-crypto-key
+
+# yarn
+yarn add crypto-splitter
+yarn add --dev rollup-plugin-crypto-key
+
+# npm
+npm install crypto-splitter
+npm install -D rollup-plugin-crypto-key
+```
+
+## 🛹 Usage
+
+Setup the plugin, using Vite as an example.
+
+```typescript
+// vite.config.(js|ts)
+
+import CryptoKey from "rollup-plugin-crypto-key";
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  plugins: [
+    CryptoKey({
+      keys: {
+        DEMO_KEY1: "iamxiaohe",
+        DEMO_KEY2: "ilovexiaohe"
+      }
+    })
+  ]
+});
+```
+
+Simply import the keys from `virtual:crypto-key`.
+
+```typescript
+import { DEMO_KEY1, DEMO_KEY2 } from "virtual:crypto-key";
+
+console.log(DEMO_KEY1); // iamxiaohe
+console.log(DEMO_KEY2); // ilovexiaohe
+```
+
+For TypeScript support
+
+1. Enable `options.dts` so that `crypto-key.d.ts` file is automatically generated.
+2. Make sure `crypto-key.d.ts` is not excluded in `tsconfig.json`.
+
+```typescript
+// vite.config.(js|ts)
+
+CryptoKey({
+  dts: true // or "xxx.d.ts"
+})
+```
+
+```json5
+// tsconfig.json
+
+{
+  "include": [
+    // ...
+    "crypto-key.d.ts"
+  ]
+}
+```
+
+It can also be used with environment variables.
+
+```typescript
+// vite.config.(js|ts)
+
+import process from "node:process";
+import CryptoKey from "rollup-plugin-crypto-key";
+import { defineConfig, loadEnv } from "vite";
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd());
+
+  return {
+    plugins: [
+      CryptoKey({
+        keys: {
+          DEMO_KEY: env.VITE_DEMO_KEY
+        }
+      })
+    ]
+  };
+});
+```
+
+```dotenv
+# .env.development
+
+VITE_DEMO_KEY=iamxiaohe
+```
+
+```dotenv
+# .env.production
+
+VITE_DEMO_KEY=ilovexiaohe
+```
+
+```typescript
+import { DEMO_KEY } from "virtual:crypto-key";
+
+// development -> iamxiaohe
+// production -> ilovexiaohe
+console.log(DEMO_KEY);
+
+// ❌ Avoid using `import.meta.env`, the plugin won't process keys accessed this way
+// console.log(import.meta.env.DEMO_KEY);
+```
+
+> [!CAUTION]
+> 🚨 Client-side protection can't guarantee absolute security,
+> It only increases the difficulty of being cracked. For stronger security,
+> it should be combined with other protective measures.
+
+## 🐶 Discussion & Communication
+
+- ❓：For questions or bug feedback, you can submit an [issues](https://github.com/xiaohe0601/virtual-crypto-key/issues)
+  and PR are welcome
+- 📫：[xiaohe0601@outlook.com](mailto:xiaohe0601@outlook.com)
+- 🐧：Not yet available
+
+## 🏆 License
+
+MIT [LICENSE](./LICENSE)
+
+[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/virtual-crypto-key?style=flat&colorA=080f12&colorB=1fa669&logo=GitHub
+[github-stars-href]: https://github.com/xiaohe0601/virtual-crypto-key
+[license-src]: https://img.shields.io/github/license/xiaohe0601/virtual-crypto-key.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/xiaohe0601/virtual-crypto-key/blob/main/LICENSE
