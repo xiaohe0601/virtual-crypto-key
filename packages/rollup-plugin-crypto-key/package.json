@@ -1,0 +1,44 @@
+{
+  "name": "rollup-plugin-crypto-key",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "🔑 A Rollup plugin for key management",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/virtual-crypto-key#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/virtual-crypto-key.git"
+  },
+  "bugs": "https://github.com/xiaohe0601/virtual-crypto-key/issues",
+  "keywords": [
+    "rollup-plugin"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "fs-extra": "catalog:node"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "catalog:types",
+    "crypto-splitter": "workspace:^",
+    "rollup": "catalog:build"
+  }
+}
