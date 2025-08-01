@@ -12,7 +12,8 @@
   },
   "bugs": "https://github.com/xiaohe0601/virtual-crypto-key/issues",
   "keywords": [
-    "rollup-plugin"
+    "rollup-plugin",
+    "vite-plugin"
   ],
   "sideEffects": false,
   "exports": {
