@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>virtual-crypto-key</h1>
+  <img src="https://oss.xiaohe.ink/images/virtual-crypto-key.png" width="160" alt="logo"/>
+  <h1>Virtual Crypto Key</h1>
   <span>🔑 A JavaScript key management library built on virtual modules</span>
 </div>
 
