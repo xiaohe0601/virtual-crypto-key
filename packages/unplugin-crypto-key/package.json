@@ -1,0 +1,66 @@
+{
+  "name": "unplugin-crypto-key",
+  "type": "module",
+  "version": "0.2.1",
+  "description": "🔑 A plugin for key management",
+  "author": "xiaohe0601 <xiaohe0601@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaohe0601/virtual-crypto-key#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohe0601/virtual-crypto-key.git"
+  },
+  "bugs": "https://github.com/xiaohe0601/virtual-crypto-key/issues",
+  "keywords": [
+    "unplugin",
+    "astro",
+    "esbuild",
+    "farm",
+    "rolldown",
+    "rollup",
+    "rspack",
+    "types",
+    "vite",
+    "webpack"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./astro": "./dist/astro.js",
+    "./esbuild": "./dist/esbuild.js",
+    "./farm": "./dist/farm.js",
+    "./rolldown": "./dist/rolldown.js",
+    "./rollup": "./dist/rollup.js",
+    "./rspack": "./dist/rspack.js",
+    "./types": "./dist/types.js",
+    "./vite": "./dist/vite.js",
+    "./webpack": "./dist/webpack.js",
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "fs-extra": "catalog:node",
+    "unplugin": "catalog:build",
+    "unplugin-utils": "catalog:build"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "catalog:types",
+    "crypto-splitter": "workspace:^"
+  }
+}

@@ -1,13 +1,15 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: "./src/index.ts",
+  entry: "./src/*.ts",
   platform: "neutral",
   format: [
-    "esm",
-    "cjs"
+    "esm"
+  ],
+  external: [
+    "crypto-splitter"
   ],
   dts: {
-    oxc: true
+    build: true
   }
 });

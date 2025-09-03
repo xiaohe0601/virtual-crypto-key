@@ -9,5 +9,8 @@ export default defineConfig({
   ],
   external: [
     "crypto-splitter"
-  ]
+  ],
+  dts: {
+    oxc: true
+  }
 });

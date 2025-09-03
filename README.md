@@ -19,14 +19,17 @@ Obfuscate and split the key, then merge it at runtime via a virtual module to pr
 # pnpm
 pnpm add crypto-splitter
 pnpm add -D rollup-plugin-crypto-key
+# or: pnpm add -D unplugin-crypto-key
 
 # yarn
 yarn add crypto-splitter
 yarn add --dev rollup-plugin-crypto-key
+# or: yarn add --dev unplugin-crypto-key
 
 # npm
 npm install crypto-splitter
 npm install -D rollup-plugin-crypto-key
+# or: npm install -D unplugin-crypto-key
 ```
 
 ## 🛹 Usage
@@ -37,6 +40,7 @@ Setup the plugin, using Vite as an example.
 // vite.config.(js|ts)
 
 import CryptoKey from "rollup-plugin-crypto-key";
+// or: import CryptoKey from "rollup-plugin-crypto-key/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -50,6 +54,8 @@ export default defineConfig({
   ]
 });
 ```
+
+> For other build tools, please refer to [unplugin-starter](https://github.com/unplugin/unplugin-starter#install).
 
 Simply import the keys from `virtual:crypto-key`.
 

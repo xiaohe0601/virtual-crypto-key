@@ -1,6 +1,6 @@
 import process from "node:process";
 import Vue from "@vitejs/plugin-vue";
-import CryptoKey from "rollup-plugin-crypto-key";
+import CryptoKey from "unplugin-crypto-key/vite";
 import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {

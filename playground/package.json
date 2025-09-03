@@ -16,6 +16,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:build",
     "rollup-plugin-crypto-key": "workspace:^",
+    "unplugin-crypto-key": "workspace:^",
     "vite": "catalog:build",
     "vue-tsc": "catalog:dev"
   }
