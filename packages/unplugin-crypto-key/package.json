@@ -1,7 +1,7 @@
 {
   "name": "unplugin-crypto-key",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "🔑 A plugin for key management",
   "author": "xiaohe0601 <xiaohe0601@outlook.com>",
   "license": "MIT",

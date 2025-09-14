@@ -1,7 +1,7 @@
 {
   "name": "virtual-crypto-key",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "packageManager": "pnpm@10.16.1",
   "description": "🔑 A JavaScript key management library built on virtual modules",
