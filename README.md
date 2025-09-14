@@ -40,7 +40,7 @@ Setup the plugin, using Vite as an example.
 // vite.config.(js|ts)
 
 import CryptoKey from "rollup-plugin-crypto-key";
-// or: import CryptoKey from "rollup-plugin-crypto-key/vite";
+// or: import CryptoKey from "unplugin-crypto-key/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
