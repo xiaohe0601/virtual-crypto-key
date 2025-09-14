@@ -1,6 +1,5 @@
 import type { Plugin } from "rollup";
-import { getCode } from "./code";
-import { writeDeclaration } from "./declaration";
+import { getCode, writeDeclaration } from "../../shared/src";
 
 export interface Options {
   /**

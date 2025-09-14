@@ -1,8 +1,7 @@
 import type { UnpluginFactory } from "unplugin";
 import { createUnplugin } from "unplugin";
+import { getCode, writeDeclaration } from "../../../shared/src";
 import type { Options } from "../types";
-import { getCode } from "./code";
-import { writeDeclaration } from "./declaration";
 
 const VIRTUAL_MODULE_ID = "virtual:crypto-key";
 const RESOLVED_VIRTUAL_MODULE_ID = `\0${VIRTUAL_MODULE_ID}`;
