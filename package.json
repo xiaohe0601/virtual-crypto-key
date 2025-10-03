@@ -24,6 +24,9 @@
   "devDependencies": {
     "@antfu/ni": "catalog:dev",
     "@antfu/utils": "catalog:dev",
+    "@types/node": "catalog:types",
+    "@vitest/coverage-v8": "catalog:test",
+    "@vitest/ui": "catalog:test",
     "@xiaohe01/eslint-config": "catalog:lint",
     "@xiaohe01/tsconfig": "catalog:dev",
     "bumpp": "catalog:cli",
