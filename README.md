@@ -9,8 +9,6 @@
 [![github stars][github-stars-src]][github-stars-href]
 [![License][license-src]][license-href]
 
-xiaohe0601 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
-
 Obfuscate and split the key, then merge it at runtime via a virtual module to prevent plaintext key exposure.
 
 ## 🚁 Installation
@@ -153,7 +151,7 @@ console.log(DEMO_KEY);
 
 MIT [LICENSE](./LICENSE)
 
-[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/virtual-crypto-key?style=flat&colorA=080f12&colorB=1fa669&logo=GitHub
+[github-stars-src]: https://img.shields.io/github/stars/xiaohe0601/virtual-crypto-key?style=flat&color=3292fe&labelColor=18181b&logo=github
 [github-stars-href]: https://github.com/xiaohe0601/virtual-crypto-key
-[license-src]: https://img.shields.io/github/license/xiaohe0601/virtual-crypto-key.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-src]: https://img.shields.io/github/license/xiaohe0601/virtual-crypto-key.svg?style=flat&color=3292fe&labelColor=18181b
 [license-href]: https://github.com/xiaohe0601/virtual-crypto-key/blob/main/LICENSE
