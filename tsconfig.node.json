@@ -10,6 +10,7 @@
     "allowJs": true
   },
   "include": [
-    "eslint.config.js"
+    "eslint.config.js",
+    "pncat.config.ts"
   ]
 }
