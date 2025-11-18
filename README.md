@@ -140,13 +140,6 @@ console.log(DEMO_KEY);
 > It only increases the difficulty of being cracked. For stronger security,
 > it should be combined with other protective measures.
 
-## 🐶 Discussion & Communication
-
-- ❓：For questions or bug feedback, you can submit an [issues](https://github.com/xiaohe0601/virtual-crypto-key/issues)
-  and PR are welcome
-- 📫：[xiaohe0601@outlook.com](mailto:xiaohe0601@outlook.com)
-- 🐧：Not yet available
-
 ## 🏆 License
 
 MIT [LICENSE](./LICENSE)
