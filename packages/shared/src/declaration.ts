@@ -1,4 +1,4 @@
-import { ensureFile, outputFile } from "fs-extra";
+import { ensureFile, outputFile } from "fs-extra/esm";
 
 interface DeclarationOptions {
   moduleId: string;

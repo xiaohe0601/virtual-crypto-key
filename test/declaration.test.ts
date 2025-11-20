@@ -1,8 +1,8 @@
-import { ensureFile, outputFile } from "fs-extra";
+import { ensureFile, outputFile } from "fs-extra/esm";
 import { describe, expect, it, vi } from "vitest";
 import { writeDeclaration } from "../packages/shared/src";
 
-vi.mock("fs-extra", () => ({
+vi.mock("fs-extra/esm", () => ({
   ensureFile: vi.fn(),
   outputFile: vi.fn()
 }));
