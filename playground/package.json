@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "crypto-splitter": "workspace:^",
-    "ress": "catalog:prod",
+    "ress": "catalog:frontend",
     "vue": "catalog:frontend"
   },
   "devDependencies": {
