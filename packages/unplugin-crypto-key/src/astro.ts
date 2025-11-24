@@ -1,5 +1,5 @@
-import unplugin from "./core";
 import type { Options } from "./types";
+import { unplugin } from ".";
 
 export default (options: Options): any => ({
   name: "unplugin-crypto-key",
