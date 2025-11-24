@@ -19,7 +19,6 @@
     "rolldown",
     "rollup",
     "rspack",
-    "types",
     "vite",
     "webpack"
   ],
