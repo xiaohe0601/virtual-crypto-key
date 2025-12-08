@@ -25,7 +25,9 @@ jobs:
       - name: Install
         run: nci
       - name: Build
-        run: nr build
+        run: |
+          nr build
+          nr -C playground build
       - name: Lint
         run: |
           nr lint
