@@ -7,6 +7,7 @@ packages:
   - playground
   - packages/**
   - examples/**
+
 catalogs:
   build:
     "@vitejs/plugin-vue": ^6.0.2
@@ -43,7 +44,7 @@ catalogs:
   xiaohe:
     "@xiaohe01/eslint-config": ^4.0.1
     "@xiaohe01/tsconfig": ^3.1.0
+
 onlyBuiltDependencies:
   - esbuild
-  - pncat
   - simple-git-hooks
