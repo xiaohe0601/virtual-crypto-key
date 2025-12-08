@@ -1,7 +1,16 @@
 {
   "references": [
     { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.test.json" }
+    { "path": "./tsconfig.test.json" },
+    { "path": "./packages/crypto-splitter/tsconfig.lib.json" },
+    { "path": "./packages/crypto-splitter/tsconfig.node.json" },
+    { "path": "./packages/rollup-plugin-crypto-key/tsconfig.lib.json" },
+    { "path": "./packages/rollup-plugin-crypto-key/tsconfig.node.json" },
+    { "path": "./packages/shared/tsconfig.json" },
+    { "path": "./packages/unplugin-crypto-key/tsconfig.lib.json" },
+    { "path": "./packages/unplugin-crypto-key/tsconfig.node.json" },
+    { "path": "./playground/tsconfig.app.json" },
+    { "path": "./playground/tsconfig.node.json" }
   ],
   "files": []
 }
